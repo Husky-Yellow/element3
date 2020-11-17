@@ -1,5 +1,6 @@
 import { PluginObject, App } from 'vue'
 import {
+  ElementUIComponent,
   ElementUIComponentSize,
   ElementUIHorizontalAlignment
 } from './component'
@@ -19,6 +20,7 @@ export { ElCascader } from './cascader'
 export { ElCheckbox } from './checkbox'
 export { ElCheckboxButton } from './checkbox-button'
 export { ElCheckboxGroup } from './checkbox-group'
+export { ElRow } from './row'
 export { ElCol } from './col'
 export { ElSelect } from './select'
 
@@ -26,29 +28,23 @@ export { ElSelect } from './select'
 import { ElCollapse } from './collapse'
 import { ElCollapseItem } from './collapse-item'
 import { ElColorPicker } from './color-picker'
-import { ElContainer } from './container'
 import { ElDatePicker } from './date-picker'
 import { ElDialog } from './dialog'
 import { ElDropdown } from './dropdown'
 import { ElDropdownItem } from './dropdown-item'
 import { ElDropdownMenu } from './dropdown-menu'
-import { ElFooter } from './footer'
 import { ElForm } from './form'
 import { ElFormItem } from './form-item'
-import { ElHeader } from './header'
+
 import { ElInput } from './input'
 import { ElInputNumber } from './input-number'
 import { ElLoading } from './loading'
-import { ElMain } from './main'
 import { ElMenu } from './menu'
 import { ElMenuItem } from './menu-item'
 import { ElMenuItemGroup } from './menu-item-group'
-import { ElMessage } from './message'
-import { ElMessageBox } from './message-box'
 import { ElNotification } from './notification'
 import { ElOption } from './option'
 import { ElOptionGroup } from './option-group'
-import { ElPagination } from './pagination'
 import { ElPopover } from './popover'
 import { ElProgress } from './progress'
 import { ElRate } from './rate'
@@ -58,12 +54,10 @@ import { ElRadioGroup } from './radio-group'
 import { ElRow } from './row'
 import { ElSlider } from './slider'
 import { ElStep } from './step'
-import { ElSteps } from './steps'
+
 import { ElSubmenu } from './submenu'
-import { ElSwitch } from './switch'
 import { ElTable } from './table'
 import { ElTableColumn } from './table-column'
-import { ElTag } from './tag'
 import { ElTabs } from './tabs'
 import { ElTabPane } from './tab-pane'
 import { ElTimeline } from './timeline'
@@ -73,8 +67,6 @@ import { ElTimeSelect } from './time-select'
 import { ElTooltip } from './tooltip'
 import { ElTransfer } from './transfer'
 import { ElTree, TreeData } from './tree'
-import { ElUpload } from './upload'
-import { ElLink } from './link'
 import { ElDivider } from './divider'
 import { ElIcon } from './icon'
 import { ElCalendar } from './calendar'
@@ -82,7 +74,6 @@ import { ElImage } from './image'
 import { ElBacktop } from './backtop'
 import { ElInfiniteScroll } from './infinite-scroll'
 import { ElPageHeader } from './page-header'
-import { ElAvatar } from './avatar'
 import { ElDrawer } from './drawer'
 import { ElPopconfirm } from './popconfirm'
 
@@ -103,7 +94,7 @@ export const version: string
 export function install(app: App, ...options: any[]): any
 
 /** ElementUI component common definition */
-export type Component = ElementUIComponen
+export type Component = ElementUIComponent
 
 /** Component size definition for button, input, etc */
 export type ComponentSize = ElementUIComponentSize
@@ -113,12 +104,6 @@ export type HorizontalAlignment = ElementUIHorizontalAlignment
 
 /** Show animation while loading data */
 export const Loading: ElLoading
-
-/** Used to show feedback after an activity. The difference with Notification is that the latter is often used to show a system level passive notification. */
-export const Message: ElMessage
-
-/** A set of modal boxes simulating system message box, mainly for message prompt, success tips, error messages and query information */
-export const MessageBox: ElMessageBox
 
 /** Displays a global notification message at the upper right corner of the page */
 export const Notification: ElNotification
@@ -131,9 +116,6 @@ export class CollapseItem extends ElCollapseItem {}
 
 /** Color Picker Component */
 export class ColorPicker extends ElColorPicker {}
-
-/** Container Component */
-export class Container extends ElContainer {}
 
 /** Date Picker Component */
 export class DatePicker extends ElDatePicker {}
@@ -150,26 +132,17 @@ export class DropdownItem extends ElDropdownItem {}
 /** Dropdown Menu Component */
 export class DropdownMenu extends ElDropdownMenu {}
 
-/** Footer Component */
-export class Footer extends ElFooter {}
-
 /** Form Component */
 export class Form extends ElForm {}
 
 /** Form Item Component */
 export class FormItem extends ElFormItem {}
 
-/** Header Component */
-export class Header extends ElHeader {}
-
 /** Input Component */
 export class Input extends ElInput {}
 
 /** Input Number Component */
 export class InputNumber extends ElInputNumber {}
-
-/** Main Component */
-export class Main extends ElMain {}
 
 /** Menu that provides navigation for your website */
 export class Menu extends ElMenu {}
@@ -186,18 +159,13 @@ export class Option extends ElOption {}
 /** Dropdown Select Option Group Component */
 export class OptionGroup extends ElOptionGroup {}
 
-/** Pagination Component */
-export class Pagination extends ElPagination {}
-
 /** Popover Component */
 export class Popover extends ElPopover {}
-
-/** Progress Component */
-export class Progress extends ElProgress {}
 
 /** Rate Component */
 export class Rate extends ElRate {}
 
+<<<<<<< HEAD
 /** Radio Component */
 export class Radio extends ElRadio {}
 
@@ -210,20 +178,16 @@ export class RadioGroup extends ElRadioGroup {}
 /** Row Layout Component */
 export class Row extends ElRow {}
 
+=======
+>>>>>>> upstream/master
 /** Slider Component */
 export class Slider extends ElSlider {}
 
 /** Step Component */
 export class Step extends ElStep {}
 
-/** Steps Component */
-export class Steps extends ElSteps {}
-
 /** Submenu Component */
 export class Submenu extends ElSubmenu {}
-
-/** Switch Component */
-export class Switch extends ElSwitch {}
 
 /** Table Component */
 export class Table extends ElTable {}
@@ -236,9 +200,6 @@ export class Tabs extends ElTabs {}
 
 /** Tab Pane Component */
 export class TabPane extends ElTabPane {}
-
-/** Tag Component */
-export class Tag extends ElTag {}
 
 /** Timeline Component */
 export class Timeline extends ElTimeline {}
@@ -261,14 +222,8 @@ export class Transfer extends ElTransfer {}
 /** Tree Component */
 export class Tree<K = any, D = TreeData> extends ElTree<K, D> {}
 
-/** Upload Component */
-export class Upload extends ElUpload {}
-
 /** Divider Component */
 export class Divider extends ElDivider {}
-
-/** Link Component */
-export class Link extends ElLink {}
 
 /** Image Component */
 export class Image extends ElImage {}
@@ -287,9 +242,6 @@ export const InfiniteScroll: PluginObject<ElInfiniteScroll>
 
 /** PageHeader Component */
 export class PageHeader extends ElPageHeader {}
-
-/** Avatar Component */
-export class Avatar extends ElAvatar {}
 
 /** Drawer Component */
 export class Drawer extends ElDrawer {}
