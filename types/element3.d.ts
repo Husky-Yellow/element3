@@ -165,21 +165,6 @@ export class Popover extends ElPopover {}
 /** Rate Component */
 export class Rate extends ElRate {}
 
-<<<<<<< HEAD
-/** Radio Component */
-export class Radio extends ElRadio {}
-
-/** Radio Button Component */
-export class RadioButton extends ElRadioButton {}
-
-/** Radio Group Component */
-export class RadioGroup extends ElRadioGroup {}
-
-/** Row Layout Component */
-export class Row extends ElRow {}
-
-=======
->>>>>>> upstream/master
 /** Slider Component */
 export class Slider extends ElSlider {}
 
